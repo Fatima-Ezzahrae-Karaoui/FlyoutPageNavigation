@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="FlyoutPageNavigation.Views.AddNewBookPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15" >
+            <Label Text="Title" FontSize="Medium" />
+            <Entry Text="{Binding Source={Reference Book} ,Path=Title}" />
+
+            <Label Text="Short Description" FontSize="Medium" />
+            <Editor Text="{Binding Source={Reference Book}, Path=ShortDescription}" FontSize="Large" Margin="0" />
+
+            <Label Text="Long Description" FontSize="Medium" />
+            <Editor Text="{Binding Source={Reference Book}, Path=LongDescription}" FontSize="Large" Margin="0" />
+
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Cancel" 
+                        BackgroundColor="#ecf0f1" TextColor="#2c3e50"
+                        Clicked="Cancel_Button" 
+                        HorizontalOptions="StartAndExpand"
+                        WidthRequest="160"/>
+                <Button Text="Save" 
+                        BackgroundColor="#16a085" TextColor="#ecf0f1" 
+                        Clicked="Save_Button" 
+                        HorizontalOptions="EndAndExpand"
+                        WidthRequest="160"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
